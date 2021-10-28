@@ -11,14 +11,23 @@ namespace Metody
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetFormulaResult(3, 5));
+            Console.WriteLine(GetFormulaResult(3, 5) );
 
 
                 }
          static double GetFormulaResult(double A, double B)
         {
-            double C = (5 * A + B * B) / (B - A);
-            return C;
+            if (A == B)
+            {
+                throw new ArgumentException("попытка деления на ноль");
+
+            }
+            else
+            {
+                double C = (5 * A + B * B) / (B - A);
+
+                return C;
+            }
         }
         static string ChangeStrings(string a, string b)
         {
