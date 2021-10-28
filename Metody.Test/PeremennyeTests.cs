@@ -25,6 +25,16 @@ namespace Metody.Test
             Assert.AreEqual(actual, expected);
 
         }
+        [TestCase(6, 2, 3)] 
+        [TestCase(8, 4, 2)] 
+        [TestCase(60, 30, 2)] 
+        [TestCase(27, 9, 3)] 
+        [TestCase(2.25, 1.5, 1.5)] 
+        public void CalculateDivision(double a, double b, double expected) 
+        { 
+            double actual = Peremennye.CalculateDivision(a, b); 
+            Assert.AreEqual(expected, actual); 
+        }
 
 
     }
