@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace Metody
 {
 
-     class Peremennye
+     public class Peremennye
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetFormulaResult(3, 5) );
+            
 
 
                 }
-         static double GetFormulaResult(double A, double B)
+         public static double GetFormulaResult(double A, double B)
         {
             if (A == B)
             {
@@ -29,7 +29,7 @@ namespace Metody
                 return C;
             }
         }
-        static string ChangeStrings(string a, string b)
+        public static string ChangeStrings(string a, string b)
         {
             string tmp = a;
             a = b;
@@ -37,22 +37,22 @@ namespace Metody
             return $"a = {a}, b = {b}";
            
         }
-         static double CalculateDivision(double a, double b)
+        public static double CalculateDivision(double a, double b)
         { 
            double c = a / b;
             return c;
         }
-         static double CalculateDivisionRemainder(double a, double b)
+        public static double CalculateDivisionRemainder(double a, double b)
         {
             double c = a % b;
             return c;
         }
-         static double SolveLinearEquation(double A, double B, double C)
+        public static double SolveLinearEquation(double A, double B, double C)
         {
             double X = (C - B) / A;
             return X;
         }
-         static string GetEquationStraight(double x1, double y1, double x2, double y2)
+        public static string GetEquationStraight(double x1, double y1, double x2, double y2)
         {
 
             double a = (y2 - y1) / (x2 - x1);
