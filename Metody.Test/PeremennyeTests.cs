@@ -35,6 +35,14 @@ namespace Metody.Test
             double actual = Peremennye.CalculateDivision(a, b); 
             Assert.AreEqual(expected, actual); 
         }
+        [TestCase(2.0, 10.0, 2)]
+        [TestCase(4.0, 8.0, 5)]
+        [TestCase(9.0, 36.0, 25)]
+        public void CalculateDivisionRemainder(double a, double b, double expected)
+        {
+            double actual = Peremennye.CalculateDivisionRemainder(a, b);
+            Assert.AreEqual(expected, actual);
+        }
 
 
     }
