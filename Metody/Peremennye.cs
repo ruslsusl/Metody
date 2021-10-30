@@ -11,7 +11,7 @@ namespace Metody
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(Peremennye.CalculateDivisionRemainder(2, 0));
 
 
                 }
@@ -40,16 +40,28 @@ namespace Metody
         public static double CalculateDivision(double a, double b)
         { 
            double c = a / b;
+            if(b==0)
+            {
+                throw new DivideByZeroException("попытка деления на ноль");
+            }
             return c;
         }
         public static double CalculateDivisionRemainder(double a, double b)
         {
             double c = a % b;
+            if (b == 0)
+            {
+                throw new DivideByZeroException("попытка получения остатка от деления на ноль");
+            }
             return c;
         }
         public static double SolveLinearEquation(double A, double B, double C)
         {
             double X = (C - B) / A;
+            if (A == 0)
+            {
+                throw new DivideByZeroException("попытка деления на ноль");
+            }
             return X;
         }
         public static string GetEquationStraight(double x1, double y1, double x2, double y2)
