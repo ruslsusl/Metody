@@ -36,11 +36,19 @@ namespace Metody.Test
             Assert.AreEqual(expected, actual); 
         }
         [TestCase(2, 10, 2)]
-        [TestCase(4, 0)]
+        [TestCase(4, 0, 4)]
         [TestCase(9, 36, 25)]
         public void CalculateDivisionRemainder(double a, double b, double expected)
         {
             double actual = Peremennye.CalculateDivisionRemainder(a, b);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestCase(2, 10, 2,-4)]
+        [TestCase(0, 0, 4, 4)]
+        [TestCase(10, -36, 64, 10)]
+        public void SolveLinearEquation(double A, double B, double C, double expected)
+        {
+            double actual = Peremennye.SolveLinearEquation(A, B, C);
             Assert.AreEqual(expected, actual);
         }
 
