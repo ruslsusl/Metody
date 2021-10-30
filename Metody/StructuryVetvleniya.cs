@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Metody
 {
-    class StructuryVetvleniya
+    public class StructuryVetvleniya
     {
         
-        static double CalculateTwoNumbers(double A, double B)
+        public static double CalculateTwoNumbers(double A, double B)
         {
             double result = 0;
             if (A > B)
