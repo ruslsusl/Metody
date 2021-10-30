@@ -9,14 +9,14 @@ namespace Metody
 
      public class Peremennye
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
             //Console.WriteLine(Peremennye.GetEquationStraight(1, 1, 0, 0));
             
-            Console.WriteLine(Peremennye.CalculateDivisionRemainder(9, 36));
+           // Console.WriteLine(Peremennye.(9, 36));
 
 
-                }
+               // }
          public static double GetFormulaResult(double A, double B)
         {
             if (A == B)
