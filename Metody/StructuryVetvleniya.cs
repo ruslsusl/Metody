@@ -30,7 +30,7 @@ namespace Metody
             }
             return result;
         }
-        static string ChooseQuarter(double X, double Y)
+        public static string ChooseQuarter(double X, double Y)
         {
             string result = "";
             if (X > 0 && Y > 0)
