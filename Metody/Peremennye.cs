@@ -11,7 +11,9 @@ namespace Metody
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Peremennye.GetEquationStraight(1, 1, 0, 0));
+            //Console.WriteLine(Peremennye.GetEquationStraight(1, 1, 0, 0));
+            
+            Console.WriteLine(Peremennye.CalculateDivisionRemainder(9, 36));
 
 
                 }
@@ -71,9 +73,14 @@ namespace Metody
             double b = -((x1 * y2) - (x2 * y1)) / (x2 - x1);
             if (x2==x1)
             {
-                throw new DivideByZeroException("координаты абсцисс прямой совпадают");
+                throw new DivideByZeroException("координаты абсцисс прямой совпадают=>деление на ноль");
+
             }
+            if(b==-0)
+                b = 0;
             return $"y = {a}*x+{b}";
+            
+            
         }
 
 
