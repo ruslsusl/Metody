@@ -61,7 +61,7 @@ namespace Metody
             }
             return result;
         }
-        static string PutNumbersInOrder(double A, double B, double C)
+        public static string PutNumbersInOrder(double A, double B, double C)
         {
             string result = "";
             if (A > B)
@@ -70,33 +70,33 @@ namespace Metody
                 if (B > C)
 
                 {
-                    result = $"{A},{B},{C}";
+                    result = $"{A}, {B}, {C}";
                 }
 
 
 
                 else if (C < A)
                 {
-                    result = $"{A},{C},{B}";
+                    result = $"{A}, {C}, {B}";
                 }
                 else
                 {
-                    result = $"{C},{A},{B}";
+                    result = $"{C}, {A}, {B}";
                 }
             }
             else
             {
                 if (A > C)
                 {
-                    result = $"{B},{A},{C}";
+                    result = $"{B}, {A}, {C}";
                 }
                 else if (B > C)
                 {
-                    result = $"{B},{C},{A}";
+                    result = $"{B}, {C}, {A}";
                 }
                 else
                 {
-                    result = $"{C},{B},{A}";
+                    result = $"{C}, {B}, {A}";
                 }
 
             }
