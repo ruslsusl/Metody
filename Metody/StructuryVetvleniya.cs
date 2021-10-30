@@ -8,7 +8,15 @@ namespace Metody
 {
     public class StructuryVetvleniya
     {
-        
+        static void Main(string[] args)
+        {
+            //Console.WriteLine(Peremennye.GetEquationStraight(1, 1, 0, 0));
+
+            Console.WriteLine(StructuryVetvleniya.SolveKvadratnoeUravneniye(1, -2, 1));
+
+
+        }
+
         public static double CalculateTwoNumbers(double A, double B)
         {
             double result = 0;
@@ -102,7 +110,7 @@ namespace Metody
             }
             return result;
         }
-        static string SolveKvadratichnoeUravneniye(double A, double B, double C)
+        public static string SolveKvadratnoeUravneniye(double A, double B, double C)
         {
             string result = "";
             if (B * B - 4 * A * C > 0)
@@ -113,7 +121,7 @@ namespace Metody
 
 
 
-                result = $"Ответ: X1 = {X1}, Ответ: X2 =  { X2}";
+                result = $"Ответ: X1 = {X1}, X2 = {X2}";
 
             }
             if (B * B - 4 * A * C == 0)
@@ -129,7 +137,7 @@ namespace Metody
             }
             return result;
         }
-        static public string WriteNumberInWords(int a)
+        public static  string WriteNumberInWords(int a)
         {
             int q = a / 10;
             int w = a % 10;
