@@ -26,8 +26,8 @@ namespace Metody.Test
 
         }
         [TestCase(6, 2, 3)] 
-        [TestCase(8, 4, 2)] 
-        [TestCase(60, 30, 2)] 
+        [TestCase(-8, -4, 2)] 
+        [TestCase(60, 0, 5)] 
         [TestCase(27, 9, 3)] 
         [TestCase(2.25, 1.5, 1.5)] 
         public void CalculateDivision(double a, double b, double expected) 
@@ -35,14 +35,15 @@ namespace Metody.Test
             double actual = Peremennye.CalculateDivision(a, b); 
             Assert.AreEqual(expected, actual); 
         }
-        [TestCase(2.0, 10.0, 2)]
-        [TestCase(4.0, 8.0, 5)]
-        [TestCase(9.0, 36.0, 25)]
+        [TestCase(2, 10, 2)]
+        [TestCase(4, 0)]
+        [TestCase(9, 36, 25)]
         public void CalculateDivisionRemainder(double a, double b, double expected)
         {
             double actual = Peremennye.CalculateDivisionRemainder(a, b);
             Assert.AreEqual(expected, actual);
         }
+
 
 
     }
