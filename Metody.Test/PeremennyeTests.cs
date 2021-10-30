@@ -51,6 +51,14 @@ namespace Metody.Test
             double actual = Peremennye.SolveLinearEquation(A, B, C);
             Assert.AreEqual(expected, actual);
         }
+        [TestCase(1, 1, 2, 2, "y= 1*x+0")]
+        [TestCase(4, 1, 4, 3, "y=x+5")]
+        [TestCase(3, 2, 2, 4, "y=-2x+8")]
+        public void GetEquationStraight(double x1, double y1, double x2, double y2, double expected)
+        {
+            string actual = Peremennye.GetEquationStraight(x1, y1, x2, y2);
+            Assert.AreEqual(expected, actual);
+        }
 
 
 
