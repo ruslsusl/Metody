@@ -48,5 +48,13 @@ namespace Metody.Test
             string actual = StructuryVetvleniya.PutNumbersInOrder(A, C, B);
             Assert.AreEqual(expected, actual);
         }
+        [TestCase(1, -2, 3, "Решения нет")]
+        [TestCase(1, -2, 1, "Ответ: X =1")]
+        [TestCase(-1, -2, 3, "Ответ: X1 = -3, X2 = 1")]
+        public void SolveKvadratnoeUravneniye(double A, double B, double C, string expected)
+        {
+            string actual = StructuryVetvleniya.SolveKvadratnoeUravneniye(A, B, C);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
