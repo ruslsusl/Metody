@@ -37,5 +37,16 @@ namespace Metody.Test
             string actual = StructuryVetvleniya.ChooseQuarter(X, Y);
             Assert.AreEqual(expected, actual);
         }
+        [TestCase(1, 3, 5, "5, 3, 1")]
+        [TestCase(2, 10, 4, "10, 4, 2" )]
+        [TestCase(-1, -4, -2, "-1, -2, -4")]
+        [TestCase(0, -10, -3, "0, -3, -10")]
+        [TestCase(5.4, 7.7, -1, "7,7, 5,4, -1")]
+        [TestCase(3, -1, 7, "7, 3, -1")]
+        public void PutNumbersInOrder(double A, double B, double C, string expected)
+        {
+            string actual = StructuryVetvleniya.PutNumbersInOrder(A, C, B);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
