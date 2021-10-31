@@ -56,5 +56,14 @@ namespace Metody.Test
             string actual = StructuryVetvleniya.SolveKvadratnoeUravneniye(A, B, C);
             Assert.AreEqual(expected, actual);
         }
+        [TestCase(12, "Двенадцать")]
+        [TestCase(22, "Двадцать Два")]
+        [TestCase(73, "Семьдесят Три")]
+
+        public void WriteNumberInWords(int a, string expected)
+        {
+            string actual = StructuryVetvleniya.WriteNumberInWords(a);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
