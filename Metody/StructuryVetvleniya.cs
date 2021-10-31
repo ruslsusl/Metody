@@ -12,7 +12,7 @@ namespace Metody
         {
             //Console.WriteLine(Peremennye.GetEquationStraight(1, 1, 0, 0));
 
-            Console.WriteLine(StructuryVetvleniya.SolveKvadratnoeUravneniye(1, -2, 1));
+            Console.WriteLine(StructuryVetvleniya.WriteNumberInWords(19));
 
 
         }
@@ -143,90 +143,68 @@ namespace Metody
             int w = a % 10;
             string s = "";
 
-
-
             if (q == 1)
             {
                 switch (a)
                 {
                     case 10:
 
-                        {
-                            s = "Десять";
 
+                        s = "Десять";
 
-
-
-
-
-
-
-
-                        }
                         break;
-
-
                     case 11:
-                        {
 
-                            s = "Одиннадцать";
-                        }
+
+                        s = "Одиннадцать";
+
                         break;
-
-
                     case 12:
-                        {
-                            s = "Двенадцать";
-                        }
-                        break;
 
+                        s = "Двенадцать";
+
+                        break;
                     case 13:
                         {
                             s = "Тринадцать";
                         }
                         break;
-
                     case 14:
                         {
                             s = "Четырнадцать";
                         }
                         break;
-
                     case 15:
                         {
                             s = "Пятнадцать";
                         }
                         break;
-
                     case 16:
                         {
                             s = "Шестнадцать";
                         }
                         break;
-
                     case 17:
                         {
                             s = "Семнадцать";
                         }
                         break;
-
                     case 18:
                         {
                             s = "Восемнадцать";
                         }
                         break;
-
                     case 19:
                         {
                             s = "Девятнадцать";
                         }
                         break;
-
-
-
                 }
             }
             else
+
+            { 
+
                 switch (q)
                 {
                     case 2:
@@ -239,7 +217,7 @@ namespace Metody
                         s = "Сорок ";
                         break;
                     case 5:
-                        s = "Пятьдесят ";
+                        s += "Пятьдесят ";
                         break;
                     case 6:
                         s = "Шестьдесят ";
@@ -254,52 +232,39 @@ namespace Metody
                         s = "Девяноста ";
                         break;
                 }
-            switch (w)
-            {
-                case 1:
-                    s = "Один ";
-                    break;
+                switch (w)
+                {
+                    case 1:
+                        s = "Один ";
+                        break;
 
-                case 2:
-                    s = "Два ";
-                    break;
-                case 3:
-                    s = "Три ";
-                    break;
-                case 4:
-                    s = "Четыре ";
-                    break;
-                case 5:
-                    s = "Пять ";
-                    break;
-                case 6:
-                    s = "Шесть ";
-                    break;
-                case 7:
-                    s = "Семь ";
-                    break;
-                case 8:
-                    s = "Восемь ";
-                    break;
-                case 9:
-                    s = "Девять ";
-                    break;
+                    case 2:
+                        s = "Два ";
+                        break;
+                    case 3:
+                        s = "Три ";
+                        break;
+                    case 4:
+                        s += "Четыре ";
+                        break;
+                    case 5:
+                        s = "Пять ";
+                        break;
+                    case 6:
+                        s = "Шесть ";
+                        break;
+                    case 7:
+                        s = "Семь ";
+                        break;
+                    case 8:
+                        s = "Восемь ";
+                        break;
+                    case 9:
+                        s = "Девять ";
+                        break;
+                }
             }
             return s;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
     }
